@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+<title>Parallax Scrolling Website | Vanilla Javascript</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<header>
+<a href="#" class="logo">Logo</a>
+<ul>
+<li><a href="#" class="active">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Work</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+</header>
+<section>
+  <img src="stars.png" id="stars">
+  <img src="moon.png" id="moon">
+  <img src="mountains_behind.png" id="mountains_behind">
+  <h2 id="text"> Website</h2>
+  <a href="#section3" id="btn">Explore Your Tử Vi</a>
+  <img src="mountains_front.png" id="mountains_front">
+</section>
+<section class="sec">
+  <img src="stars.png" id="stars">
+<div >
+  
+  <div class="wrapper">
+      <h1>Our Team</h1>
+      <div class="our_team">
+          <div class="team_member">
+            <div class="member_img">
+               <img src="https://i.imgur.com/2Necikc.png" alt="our_team">
+              <div class="social_media">
+                 <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                 <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                 <div class="instagram item"><i class="fab fa-instagram"></i></div>
+               </div>
+            </div>
+            <h3>john wright</h3>
+            <span>CEO</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione perspiciatis, error deleniti quaerat beatae doloribus incidunt excepturi. Fugit deleniti accusantium neque hic quidem voluptatibus cumque.</p>
+          </div>
+          <div class="team_member">
+             <div class="member_img">
+               <img src="https://i.imgur.com/JzUIF4o.png" alt="our_team">
+               <div class="social_media">
+                 <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                 <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                 <div class="instagram item"><i class="fab fa-instagram"></i></div>
+               </div>
+            </div>
+            <h3>barbara mori</h3>
+            <span>Accountant</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione perspiciatis, error deleniti quaerat beatae doloribus incidunt excepturi. Fugit deleniti accusantium neque hic quidem voluptatibus cumque.</p>
+        </div>
+          <div class="team_member">
+             <div class="member_img">
+               <img src="https://i.imgur.com/Ctwf8HA.png" alt="our_team">
+               <div class="social_media">
+                 <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                 <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                 <div class="instagram item"><i class="fab fa-instagram"></i></div>
+               </div>
+            </div>
+            <h3>harry dickens</h3>
+            <span>Product Manager</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione perspiciatis, error deleniti quaerat beatae doloribus incidunt excepturi. Fugit deleniti accusantium neque hic quidem voluptatibus cumque.</p>
+        </div>
+          <div class="team_member">
+             <div class="member_img">
+               <img src="https://i.imgur.com/A1Fjq0d.png" alt="our_team">
+               <div class="social_media">
+                 <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+                 <div class="twitter item"><i class="fab fa-twitter"></i></div>
+                 <div class="instagram item"><i class="fab fa-instagram"></i></div>
+               </div>
+            </div>
+            <h3>sammy louise</h3>
+            <span>product analyst</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione perspiciatis, error deleniti quaerat beatae doloribus incidunt excepturi. Fugit deleniti accusantium neque hic quidem voluptatibus cumque.</p>
+        </div>  
+        <div class="team_member">
+          <div class="member_img">
+            <img src="https://i.imgur.com/A1Fjq0d.png" alt="our_team">
+            <div class="social_media">
+              <div class="facebook item"><i class="fab fa-facebook-f"></i></div>
+              <div class="twitter item"><i class="fab fa-twitter"></i></div>
+              <div class="instagram item"><i class="fab fa-instagram"></i></div>
+            </div>
+         </div>
+         <h3>sammy louise</h3>
+         <span>product analyst</span>
+         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione perspiciatis, error deleniti quaerat beatae doloribus incidunt excepturi. Fugit deleniti accusantium neque hic quidem voluptatibus cumque.</p>
+     </div>  
+     
+      </div>
+  </div>
+</div>
+</section>
+<script>
+  let stars = document.getElementById('stars');
+  let moon = document.getElementById('moon');
+  let mountains_behind = document.getElementById('mountains_behind');
+  let text = document.getElementById('text');
+  let btn = document.getElementById('btn');
+  let mountains_front = document.getElementById('mountains_front');
+  let header = document.querySelector('header');
+  window.addEventListener('scroll', function() {
+    var value = window.scrollY;
+
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+  })
+</script>
+
+<section id="section3">
+  <img src="stars.png" id="stars">
+
+  <h1>Facial physiognomy model using Flask</h1>
+  <h2>Input Area</h2>
+  <div>
+    <form method="POST" enctype="multipart/form-data" action="/">
+        <input type="file" id="myFile" name="uploaded-file" accept=".jpg" class ="btn btn-outline-dark btn-effect">
+        <input type="submit" value="Submit" class ="btn btn-outline-dark btn-effect">
+    </form>
+  <br>
+    <p style="color:blue;">Choose image file to upload</p>
+    <form action="/show_data" target="_blank" class ="btn btn-outline-dark btn-effect">
+        <input type="submit" value="Show Image" />
+    </form>
+  </div>
+  <div>
+    <img src="" alt="preview">
+  </div>
+</section>
+
+</body>
+</html>
